@@ -2,11 +2,11 @@
 pipeline {
     agent none
    stages {   
-      stage('build') {
+     stage('Build') {
             steps {
-                sh 'python --version'
+                sh 'printenv'
             }
-        }  
+        }
     stage('Maven Install') {
       agent {         
        docker {          
