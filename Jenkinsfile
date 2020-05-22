@@ -1,7 +1,12 @@
 #!groovy
 pipeline {
     agent none
-   stages {     
+   stages {   
+      stage('build') {
+            steps {
+                sh 'python --version'
+            }
+        }  
     stage('Maven Install') {
       agent {         
        docker {          
