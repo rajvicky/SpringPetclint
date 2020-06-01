@@ -2,7 +2,7 @@
 pipeline {
     agent none
     environment {
-    PATH = "C:\\WINDOWS\\SYSTEM32"
+    PATH = "C:\\WINDOWS\\SYSTEM32;C:\\Program Files\\Docker Toolbox"
 }
    stages {    
     stage('Maven Install') {
