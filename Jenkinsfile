@@ -7,10 +7,10 @@ pipeline {
                 echo 'Hello world!' 
             }
         }
-         stage('build') {
+          stage("Test sh script in container") {
             steps {
-                sh 'python --version'
+              sh label: 'Echo "Hello World...', script: 'echo "Hello World!"'
             }
-        }   
+        }
     }
 }
