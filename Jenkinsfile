@@ -1,5 +1,8 @@
 #!groovy
 pipeline {
+    environment {
+    PATH = "C:\\WINDOWS\\SYSTEM32;C:\\Program Files\\Docker Toolbox"
+}
     agent any 
     stages {
         stage('Stage 1') {
