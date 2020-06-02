@@ -7,6 +7,12 @@ pipeline {
                 echo 'Hello world!' 
             }
         }
+        stage('Maven Install') {
+      agent {         
+       docker {          
+         image 'maven:3.5.0'         
+      } 
+      }
           stage("Test sh script in container") {
             steps {
               sh label: 'Echo "Hello World...', script: 'echo "Hello World!"'
