@@ -7,8 +7,8 @@ pipeline {
     stages {
         
           stage("Test sh script in container") {
-            steps {
-              sh label: 'Echo "Hello World...', script: 'echo "Hello World!"'
+           steps {
+                sh 'printenv'
             }
         }
     }
